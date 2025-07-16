@@ -1,0 +1,56 @@
+/* CSS rule for the parallax container */
+.parallax-container {
+  /*  This container has a position value of relative, which means it will be positioned relative to its normal position.*/
+  position: relative;
+
+  /* The overflow value is set to hidden, which means that any content exceeding the dimensions of the div will be hidden. This is necessary to keep the background image inside the container. */
+  overflow: hidden;
+  height: 1500px;
+}
+
+/* CSS rule for the parallax image */
+.parallax-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+
+  #backg {
+    background-color: white;
+  }
+
+  /* The height of the image is set to 90%. You can increase the number to make it taller than the viewport. This allows the image to scroll at a different speed from the rest of the page, creating the parallax effect. */
+  height: 100%;
+
+  /* Below we are setting the background image of the div. Replace 'mountain.jpg' with the path to your own image. Remember to import whatever image you wish to your Code Sandbox! */
+  background-image: url("src/assets/pexels-pakkontrack-4350803.jpg");
+
+  /*The rule below ensures the background image is fixed in place, even when the rest of the page scrolls. */
+  background-attachment: fixed;
+
+  /* This just simply centers the background image */
+  background-position: center;
+
+  /* This rule ensures the image covers the full width and height of the div, scaling the image as needed. */
+  background-size: cover;
+
+  transform: translateY(0px);
+  z-index: 1;
+}
+
+.parallax-text {
+  /* This position is relative, same as the parallax-container class*/
+  position: relative;
+  z-index: 2;
+
+  /* The rule moves the text 200 pixels down from the top of the container. This value can be adjusted as needed to position your text. */
+  padding: 300px 30px;
+  font-size: 2em;
+
+  /* The text color is set to black */
+  color: black;
+
+  /* This centers the text within the div. */
+  text-align: center;
+}
